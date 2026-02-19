@@ -32,25 +32,25 @@ export default function Welcome({ auth }) {
               year="Jaar 1"
               phase="Verkennings fase"
               text="Ontdek de basis van development, samenwerken en je eerste projecten."
-              href="#"
+              href="/jaar1"
             />
             <HomeCard
               year="Jaar 2"
               phase="Verdiepings fase"
               text="Meer focus op frameworks, databases en werken in sprints."
-              href="#"
+              href="/jaar2"
             />
             <HomeCard
               year="Jaar 3"
               phase="Praktijk fase"
               text="Stage, grotere projecten en realistische opdrachten met partners."
-              href="#"
+              href="/jaar3"
             />
             <HomeCard
               year="Jaar 4"
               phase="Afstudeer fase"
               text="Afstuderen met een eindproject en portfolio richting werkveld."
-              href="#"
+              href="/jaar4"
             />
           </div>
 
