@@ -1,18 +1,5 @@
-@use "./abstracts/reset";
-@use "./abstracts/variables";
-@use "./abstracts/mixins";
-@use "./abstracts/base";
-@use "./pages/home";
-
-
-
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
 
 /* Base */
 body {
