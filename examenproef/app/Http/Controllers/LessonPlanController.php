@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LessonPlan;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class LessonPlanController extends Controller
@@ -27,7 +29,10 @@ class LessonPlanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->validateData($request);
+        $subject = Subject::find($data['subject_id']);
+        $subject->lesson_plans()->create($data);
+        return back();
     }
 
     /**
@@ -51,7 +56,10 @@ class LessonPlanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $this->validateData($request);
+        $lessonPlan = LessonPlan::find($id);
+        $lessonPlan->update($data);
+        return back();
     }
 
     /**
@@ -60,5 +68,15 @@ class LessonPlanController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    
+    protected function validateData(Request $request){
+        $data = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'subject_id' => 'required',
+            'module_id' => 'required'
+        ]);
+        return $data;
     }
 }

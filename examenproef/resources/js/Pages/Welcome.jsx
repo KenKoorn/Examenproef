@@ -6,10 +6,10 @@ function Welcome({auth}){
         <>
         {
             auth.user ? <AuthenticatedLayout>
-                
+                user
             </AuthenticatedLayout>
             : <GuestLayout>
-                
+                guest
             </GuestLayout>
         }
         </>

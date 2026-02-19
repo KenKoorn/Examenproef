@@ -1,6 +1,6 @@
 import { usePage } from "@inertiajs/react";
 
-function AuthenticatedLayout({header, children}){
+function AuthenticatedLayout({children}){
     const user = usePage().props.auth.user;
     return(
         <>

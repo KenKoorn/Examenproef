@@ -7,4 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Module extends Model
 {
     protected $fillable = ['name', 'description', 'year_id'];
+
+    public function year(){
+        return $this->belongsTo(Year::class);
+    }
+
+    public function lessonPlans(){
+        return $this->hasMany(LessonPlan::class);
+    }
 }

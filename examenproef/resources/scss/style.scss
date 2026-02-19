@@ -1,2 +1,5 @@
 @use "abstracts/reset";
 @use "abstracts/base";
+@use "components/auth/auth.scss";
+@use "abstracts/components";
+@use "abstracts/mediaqueries";
