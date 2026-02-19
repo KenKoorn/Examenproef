@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .home-hero {
   position: relative;
   min-height: 100vh;
@@ -20,8 +22,8 @@
 
 .home-hero__logo {
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: $padding-xl;
+  left: $padding-xl;
   z-index: 5;
 }
 
@@ -31,34 +33,32 @@
   display: block;
 }
 
-/* Content */
 .home-hero__content {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 1200px;
-  padding: 2rem;
+  padding: $padding-xl;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-
 .home-hero__center {
   text-align: center;
-  color: #fff;
+  color: $color-base-white;
   margin-bottom: 2.5rem;
 }
 
 .home-hero__center h1 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: $padding-m;
 }
 
 .home-hero__center p {
-  font-size: clamp(2.5rem, 2vw, 1.35rem);
+  font-size: clamp(1.35rem, 2vw, 2.5rem);
   opacity: 0.9;
   font-style: italic;
 }
@@ -72,36 +72,36 @@
 
 .home-card {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
-  padding: 1.5rem;
+  border-radius: $border-radius-l;
+  padding: $padding-xl;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
 }
 
 .home-card__title {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: $padding-s;
 }
 
 .home-card__phase {
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #334155;
+  margin-bottom: $padding-md;
+  color: $color-text-blue;
 }
 
 .home-card__text {
   font-size: 0.95rem;
-  color: #475569;
-  margin-bottom: 1rem;
+  color: $color-text-muted;
+  margin-bottom: $padding-l;
 }
 
 .home-card__btn {
   display: inline-block;
-  background: #e11d83;
-  color: #fff;
+  background: $color-button-primary;
+  color: $color-base-white;
   text-decoration: none;
-  padding: 0.6rem 0.9rem;
-  border-radius: 10px;
+  padding: $padding-m $padding-l;
+  border-radius: $border-radius-m;
   font-weight: 600;
   font-size: 0.85rem;
   transition: 0.2s ease;
@@ -112,32 +112,31 @@
   filter: brightness(1.05);
 }
 
-/* Buttons onderaan */
 .home-hero__actions {
   display: flex;
-  gap: 0.75rem;
+  gap: $padding-md;
 }
 
 .btn {
   text-decoration: none;
-  padding: 0.85rem 1.2rem;
-  border-radius: 12px;
+  padding: $padding-md $padding-l;
+  border-radius: $border-radius-md;
   font-weight: 600;
   transition: 0.2s ease;
 }
 
 .btn--primary {
-  background: #111827;
-  color: #fff;
+  background: $color-background-dark;
+  color: $color-base-white;
 }
 
 .btn--primary:hover {
-  background: #374151;
+  background: $color-text-blue;
 }
 
 .btn--ghost {
   background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  color: $color-base-white;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -145,7 +144,6 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Responsive */
 @media (max-width: 1050px) {
   .home-cards {
     grid-template-columns: repeat(2, 1fr);
