@@ -11,27 +11,32 @@
 
     &__label{
         font-size: 90%;
-        color: rgba(map-get(variables.$colors, "black"), 0.8);
+        color: rgba(map-get(variables.$colors, "basic-black"), 0.8);
     }
 
     &__input{
         background: none;
-        border: 0.1rem solid rgba(map-get(variables.$colors, "black"), 0.4);
+        // border: 0.1rem solid rgba(map-get(variables.$colors, "basic-black"), 0.4);
         font-size: 110%;
         padding: 0.4rem;
         border-radius: 0.2rem;
         width: 100%;
     }
+
+    &__error{
+        font-size: 75%;
+        color: map-get(variables.$colors, "error-red");
+    }
 }
 
 .pinkbutton{
-    background: map-get(variables.$colors, "pink");
+    background: map-get(variables.$colors, "button-primary");
     // border: 0.2rem solid map-get(variables.$colors, "buttonBorder");
     border: none;
-    box-shadow: inset 0 -0.1rem 0 0 map-get(variables.$colors, "buttonBorder");
-    border-radius: map-get(variables.$baseVars, "borderRadius");
-    padding: 0.4rem 1rem;
-    color: map-get(variables.$colors, "white");
+    box-shadow: inset 0 -0.1rem 0 0 map-get(variables.$colors, "button-primary-border");
+    border-radius: map-get(variables.$border, "border-radius-sm");
+    padding: map-get(variables.$padding, "padding-s") map-get(variables.$padding, "padding-md");
+    color: map-get(variables.$colors, "basic-white");
     font-weight: 600;
     font-size: 100%;
 }
@@ -49,8 +54,9 @@
         width: 1.5rem;
         aspect-ratio: 1/1;
         appearance: none;
-        border: 0.1rem solid rgba(map-get(variables.$colors, "black"), 0.4);
-        border-radius: 0.2rem;
+        border: 0.15em solid map-get(variables.$colors, "basic-black");
+        // border: map-get(variables.$border, "standard-border");
+        border-radius: map-get(variables.$border, "border-radius-s");
 
         &:focus{
             outline: none;
@@ -69,9 +75,9 @@
         &::after{
             content: "";
             position: absolute;
-            top: 0rem;
+            top: 0;
             left: 0.45rem;
-            border: solid map-get(variables.$colors, "pink");
+            border: solid map-get(variables.$colors, "button-primary");
             border-width: 0 0.2rem 0.2rem 0;
             transform: rotate(45deg);
             width: 0.6rem;

@@ -29,12 +29,12 @@
     }
 
     &__title{
-        color: map-get(variables.$colors, "white");
+        color: map-get(variables.$colors, "basic-white");
         font-size: 150%;
     }
 
     &__form{
-        background: map-get(variables.$colors, "white");
+        background: map-get(variables.$colors, "basic-white");
         box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(map-get(variables.$baseVars, "color"), 0.1);
         padding: 2.5rem 2.5rem;
         @include mixins.flexBox;
@@ -45,6 +45,15 @@
 
         &--title{
             font-size: 150%;
+        }
+
+        &--status{
+            font-size: 90%;
+        }
+
+        &--forgot{
+            font-size: 90%;
+            color: map-get(variables.$colors, "text-blue");
         }
     }
 }
