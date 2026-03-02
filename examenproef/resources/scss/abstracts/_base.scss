@@ -1,9 +1,6 @@
-@use "./variables";
+@use "./variables" as *;
 
 body {
-  min-height: 100vh;
   background: $color-background-default;
   color: $color-text-base;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.6rem;
 }

@@ -4,13 +4,16 @@ export default function Jaar2() {
   return (
     <>
       <Head title="Jaar 2" />
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold">Jaar 2</h1>
-        <p>Welkom op de informatiepagina voor Jaar 2 van de opleiding.</p>
-        <Link href="/" className="mt-4 inline-block text-blue-500 underline">
+      <div className="jaar2">
+        <h1 className="jaar2__title">Jaar 2</h1>
+        <p className="jaar2__text">
+          Welkom op de informatiepagina voor Jaar 2 van de opleiding.
+        </p>
+        <Link href="/" className="jaar2__link">
           Terug naar home
         </Link>
       </div>
     </>
   );
 }
+
