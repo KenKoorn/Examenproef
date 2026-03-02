@@ -1,0 +1,30 @@
+body {
+  min-height: 100vh;
+  background: #f4f6f9;
+  color: #1e293b;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.button {
+  background-color: #e11d83;
+  border: minmax(1px, 0.125em) solid #000;
+  border-radius: 1.25em;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+.button:hover {
+  background-color: #B7266F;
+}
+
+/*# sourceMappingURL=app.scss.map */
