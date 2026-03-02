@@ -1,2 +1,4 @@
-@use "abstracts" as *;
-@use "components/button";
+@use "abstracts/reset";
+@use "abstracts/base";
+@use "components/home/app.scss";
+@use "components/home/home.scss";

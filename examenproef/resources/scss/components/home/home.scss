@@ -1,4 +1,5 @@
-@use "../abstracts" as *;
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
 
 .home-hero {
   position: relative;
@@ -22,8 +23,8 @@
 
 .home-hero__logo {
   position: absolute;
-  top: $padding-xl;
-  left: $padding-xl;
+  top: variables.$padding-xl;
+  left: variables.$padding-xl;
   z-index: 5;
 }
 
@@ -38,7 +39,7 @@
   z-index: 2;
   width: 100%;
   max-width: 1200px;
-  padding: $padding-xl;
+  padding: variables.$padding-xl;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,14 +48,14 @@
 
 .home-hero__center {
   text-align: center;
-  color: $color-base-white;
+  color: variables.$color-base-white;
   margin-bottom: 2.5rem;
 }
 
 .home-hero__center h1 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 600;
-  margin-bottom: $padding-m;
+  margin-bottom: variables.$padding-m;
 }
 
 .home-hero__center p {
@@ -72,36 +73,36 @@
 
 .home-card {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: $border-radius-l;
-  padding: $padding-xl;
+  border-radius: variables.$border-radius-l;
+  padding: variables.$padding-xl;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
 }
 
 .home-card__title {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: $padding-s;
+  margin-bottom: variables.$padding-s;
 }
 
 .home-card__phase {
   font-weight: 600;
-  margin-bottom: $padding-md;
-  color: $color-text-blue;
+  margin-bottom: variables.$padding-md;
+  color: variables.$color-text-blue;
 }
 
 .home-card__text {
   font-size: 0.95rem;
-  color: $color-text-muted;
-  margin-bottom: $padding-l;
+  color: variables.$color-text-muted;
+  margin-bottom: variables.$padding-l;
 }
 
 .home-card__btn {
   display: inline-block;
-  background: $color-button-primary;
-  color: $color-base-white;
+  background: variables.$color-button-primary;
+  color: variables.$color-base-white;
   text-decoration: none;
-  padding: $padding-m $padding-l;
-  border-radius: $border-radius-m;
+  padding: variables.$padding-m variables.$padding-l;
+  border-radius: variables.$border-radius-m;
   font-weight: 600;
   font-size: 0.85rem;
   transition: 0.2s ease;
@@ -114,29 +115,29 @@
 
 .home-hero__actions {
   display: flex;
-  gap: $padding-md;
+  gap: variables.$padding-md;
 }
 
 .btn {
   text-decoration: none;
-  padding: $padding-md $padding-l;
-  border-radius: $border-radius-md;
+  padding: variables.$padding-md variables.$padding-l;
+  border-radius: variables.$border-radius-md;
   font-weight: 600;
   transition: 0.2s ease;
 }
 
 .btn--primary {
-  background: $color-background-dark;
-  color: $color-base-white;
+  background: variables.$color-background-dark;
+  color: variables.$color-base-white;
 }
 
 .btn--primary:hover {
-  background: $color-text-blue;
+  background: variables.$color-text-blue;
 }
 
 .btn--ghost {
   background: rgba(255, 255, 255, 0.15);
-  color: $color-base-white;
+  color: variables.$color-base-white;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 

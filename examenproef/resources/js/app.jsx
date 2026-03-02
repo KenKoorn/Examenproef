@@ -1,6 +1,5 @@
 import '../css/app.css';
 import './bootstrap';
-// import '../scss/app.scss';
 
 
 
