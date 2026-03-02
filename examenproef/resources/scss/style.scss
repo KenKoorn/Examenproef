@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 @use "abstracts" as *;
 @use "components/button";
 @forward "jaar2";
 @use "pages";
+=======
+@use "abstracts/reset";
+@use "abstracts/base";
+@use "components/home/app.scss";
+@use "components/home/home.scss";
+>>>>>>> f01f40d9f107dcd71036e031a9ae44c73106ba2e
