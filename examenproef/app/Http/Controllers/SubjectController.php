@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Subject;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Spatie\Permission\Models\Role;
 
 class SubjectController extends Controller
 {
@@ -20,7 +23,10 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        // $teachers = User::roles('teacher');
+        $teachers = User::role('teacher')->get();
+        // $t = Role::where
+        return Inertia::render('Subject/Form', ['teachers' => $teachers]);
     }
 
     /**

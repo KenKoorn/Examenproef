@@ -27,10 +27,9 @@ class ModuleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Year $year)
     {
         $data = $this->validateData($request);
-        $year = Year::find($data['year_id']);
         $year->modules()->create($data);
         return back();
     }
@@ -74,7 +73,7 @@ class ModuleController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'year_id' => 'required'
+            'image' => ''
         ]);
         return $data;
     }

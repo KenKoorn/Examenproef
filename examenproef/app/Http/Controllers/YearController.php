@@ -40,7 +40,15 @@ class YearController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $year = Year::find($id);
+        $modules = $year->modules;
+        
+        return Inertia::render('Year/Year',
+            [
+                'year' => $year,
+                'modules' => $modules
+            ]
+        );
     }
 
     /**

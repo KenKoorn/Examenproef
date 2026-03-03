@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model
 {
-    protected $fillable = ['name', 'description', 'year_id'];
+    protected $fillable = ['name', 'description', 'image', 'year_id'];
 
     public function year(){
         return $this->belongsTo(Year::class);

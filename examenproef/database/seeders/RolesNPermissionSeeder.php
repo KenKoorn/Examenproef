@@ -25,8 +25,8 @@ class RolesNPermissionSeeder extends Seeder
         // $admin->givePermissionTo(['create_users', 'edit', 'edit_all']);
         // $teacher->givePermissionTo(['edit']);
 
-        $user = User::find(1);
-        $user->assignRole('admin');
+        $user = User::find(3);
+        $user->assignRole('teacher');
         
     }
 }
