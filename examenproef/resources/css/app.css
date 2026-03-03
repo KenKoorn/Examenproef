@@ -18,7 +18,7 @@ body {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #f4f6f9;
+  background: transparent;
   color: #1e293b;
   line-height: 1.6;
 }
@@ -274,3 +274,174 @@ body {
 }
 
 /*# sourceMappingURL=app.css.map */
+  
+
+.jaar1 {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content-card {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    .module {
+      margin-bottom: 2rem;
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    .vakken-section {
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      .vakken-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .vak-item {
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        .vak-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h3 {
+            margin: 0;
+            font-size: 1rem;
+          }
+
+          .arrow {
+            transition: transform 0.3s ease;
+          }
+
+          .rotate {
+            transform: rotate(180deg);
+          }
+        }
+
+        .vak-content {
+          margin-top: 0.5rem;
+          ul {
+            padding-left: 1rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #333;
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: 0.3s;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+  position: absolute;
+  left: 60px;
+  top: 100px; /* begint boven de card */
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 220px; /* afstand tussen modules */
+}
+
+/* Bolletje */
+.circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  z-index: 2;
+}
+
+/* Lijn onder bolletje */
+.line {
+  position: absolute;
+  left: 8px;
+  top: 18px;
+  width: 2px;
+  height: 220px; /* EXACT gelijk aan margin-bottom */
+  background: white;
+}
+
+/* Tekst */
+.timeline-item p {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Active */
+.timeline-item.active .circle {
+  background: #4caf50;
+}
+
+.timeline-item.active p {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Tekst */
+.timeline-item p {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Active */
+.timeline-item.active .circle {
+  background: #4caf50;
+}
+
+.timeline-item.active p {
+  color: #4caf50;
+  font-weight: bold;
+}
