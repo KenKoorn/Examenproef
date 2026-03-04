@@ -1,2 +1,4 @@
 @use "abstracts/reset";
 @use "abstracts/base";
+@use "components/home/app" as *;
+@use "components/home/home" as *;
