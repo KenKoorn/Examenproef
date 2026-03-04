@@ -1,5 +1,5 @@
 import TextInput from "@/Components/Input";
-import PinkButton from "@/Components/PinkButton";
+import PinkButton from "@/Components/PinkButton";hx
 import { useForm } from "@inertiajs/react";
 
 function Register(){

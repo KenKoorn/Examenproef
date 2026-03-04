@@ -15,4 +15,8 @@ class Module extends Model
     public function lessonPlans(){
         return $this->hasMany(LessonPlan::class);
     }
+
+    public function cohortModules(){
+        return $this->hasMany(CohortModules::class);
+    }
 }

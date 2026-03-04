@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 function Welcome({auth}){
     const [isOpen, setIsOpen] = useState(false);
+    const [openCohort, setOpenCorhort] = useState(false);
     const years = usePage().props.years;
     const roles = usePage().props.auth.role;
     const {post, processing} = useForm();
@@ -29,6 +30,10 @@ function Welcome({auth}){
 
                 <PinkButton text="log out" type="submit" onClick={submit}/>
                 
+                {
+                    roles.find((item) => item.name == 'admin') &&
+                    <PinkButton text="cohort +" onClick={() => setOpenCorhort(!openCohort)}/>
+                }
 
                 {
                     roles.find((item) => item.name == 'admin') &&
