@@ -18,7 +18,7 @@ function VakItem({ title, children }) {
 
 export default function Jaar1() {
   const backgroundUrl =
-    "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg";
+    "https://welkombijma.nl/wp-content/uploads/2023/05/SD-scaled.jpg"; // Pas dit pad aan naar jouw afbeelding
 
   return (
     <>

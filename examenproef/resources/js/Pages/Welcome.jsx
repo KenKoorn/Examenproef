@@ -1,7 +1,7 @@
 import { Head, Link } from "@inertiajs/react";
 
-import heroImg from "../../img/frontimagema.jpg";
-import logo from "../../img/logowitwelkombijma.jpg";
+import heroImg from "../../../public/img/frontimagema.jpg";
+import logo from "../../../public/img/logowitwelkombijma.jpg";
 
 export default function Welcome({ auth }) {
   return (
