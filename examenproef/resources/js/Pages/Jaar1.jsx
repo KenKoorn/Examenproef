@@ -1,6 +1,7 @@
 import { Head, Link } from "@inertiajs/react";
 import { useState } from "react";
 
+
 function VakItem({ title, children }) {
   const [open, setOpen] = useState(false);
 
@@ -19,6 +20,7 @@ function VakItem({ title, children }) {
 export default function Jaar1() {
   const backgroundUrl =
     "https://welkombijma.nl/wp-content/uploads/2023/05/SD-scaled.jpg"; // Pas dit pad aan naar jouw afbeelding
+    const [openModule, setOpenModule] = useState(null);
 
   return (
     <>
@@ -32,19 +34,16 @@ export default function Jaar1() {
        <div className="timeline">
   <div className="timeline-item">
     <div className="circle"></div>
-    <div className="line"></div>
     <p>Module 1</p>
   </div>
 
   <div className="timeline-item">
     <div className="circle"></div>
-    <div className="line"></div>
     <p>Module 2</p>
   </div>
 
   <div className="timeline-item">
     <div className="circle"></div>
-    <div className="line"></div>
     <p>Module 3</p>
   </div>
 
@@ -67,9 +66,13 @@ export default function Jaar1() {
           </div>
 
           <div className="vakken-section">
-            <h2>Vakken</h2>
+ <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
+  Vakken {openModule === 1 ? "▲" : "▼"}
+</h2>
 
-            <div className="vakken-grid">
+            {openModule === 1 && (
+  <div className="vakken-grid">
+    
               <VakItem title="BO">
                 <ul>
                   <li>De beroepsopdracht die je gaat maken</li>
@@ -104,6 +107,193 @@ export default function Jaar1() {
                 </ul>
               </VakItem>
             </div>
+            )}
+          </div>
+
+          <Link href="/" className="back-link">
+            Terug naar home
+          </Link>
+        </div>
+
+        {/* END CENTER CARD */}
+
+       <div className="content-card">
+          <div className="module">
+            <h1>Module 2</h1>
+            <p className="subtitle">Oriëntatie fase</p>
+            <p>
+              In het eerste jaar maak je kennis met de basis van software
+              development. Je leert programmeren, samenwerken en werken aan
+              projecten die aansluiten bij het werkveld.
+            </p>
+          </div>
+
+          <div className="vakken-section">
+ <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
+  Vakken {openModule === 1 ? "▲" : "▼"}
+</h2>
+
+            {openModule === 1 && (
+  <div className="vakken-grid">
+    
+              <VakItem title="BO">
+                <ul>
+                  <li>De beroepsopdracht die je gaat maken</li>
+                  <li>Hulp bij je beroepshouding</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="GDV">
+                <ul>
+                  <li>Unity training</li>
+                  <li>Je eerste game development proefje</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="PROG">
+                <ul>
+                  <li>Basis JavaScript</li>
+                  <li>Werken met React</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="SKILL">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+              <VakItem title="BWP">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+            </div>
+            )}
+          </div>
+
+          <Link href="/" className="back-link">
+            Terug naar home
+          </Link>
+        </div>
+
+        <div className="content-card">
+          <div className="module">
+            <h1>Module 3</h1>
+            <p className="subtitle">Oriëntatie fase</p>
+            <p>
+              In het eerste jaar maak je kennis met de basis van software
+              development. Je leert programmeren, samenwerken en werken aan
+              projecten die aansluiten bij het werkveld.
+            </p>
+          </div>
+
+          <div className="vakken-section">
+ <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
+  Vakken {openModule === 1 ? "▲" : "▼"}
+</h2>
+
+            {openModule === 1 && (
+  <div className="vakken-grid">
+    
+              <VakItem title="BO">
+                <ul>
+                  <li>De beroepsopdracht die je gaat maken</li>
+                  <li>Hulp bij je beroepshouding</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="GDV">
+                <ul>
+                  <li>Unity training</li>
+                  <li>Je eerste game development proefje</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="PROG">
+                <ul>
+                  <li>Basis JavaScript</li>
+                  <li>Werken met React</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="SKILL">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+              <VakItem title="BWP">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+            </div>
+            )}
+          </div>
+
+          <Link href="/" className="back-link">
+            Terug naar home
+          </Link>
+        </div>
+
+         {/* CENTER CARD */}
+        <div className="content-card">
+          <div className="module">
+            <h1>Module 4</h1>
+            <p className="subtitle">Oriëntatie fase</p>
+            <p>
+              In het eerste jaar maak je kennis met de basis van software
+              development. Je leert programmeren, samenwerken en werken aan
+              projecten die aansluiten bij het werkveld.
+            </p>
+          </div>
+
+          <div className="vakken-section">
+ <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
+  Vakken {openModule === 1 ? "▲" : "▼"}
+</h2>
+
+            {openModule === 1 && (
+  <div className="vakken-grid">
+    
+              <VakItem title="BO">
+                <ul>
+                  <li>De beroepsopdracht die je gaat maken</li>
+                  <li>Hulp bij je beroepshouding</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="GDV">
+                <ul>
+                  <li>Unity training</li>
+                  <li>Je eerste game development proefje</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="PROG">
+                <ul>
+                  <li>Basis JavaScript</li>
+                  <li>Werken met React</li>
+                </ul>
+              </VakItem>
+
+              <VakItem title="SKILL">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+              <VakItem title="BWP">
+                <ul>
+                  <li>Presenteren</li>
+                  <li>Samenwerken</li>
+                </ul>
+              </VakItem>
+            </div>
+            )}
           </div>
 
           <Link href="/" className="back-link">
@@ -112,6 +302,7 @@ export default function Jaar1() {
         </div>
 
       </div>
+      
     </>
   );
 }
