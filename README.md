@@ -11,3 +11,7 @@ docker aan :
 ```
 npm run dev
 ```
+
+
+trello :
+https://trello.com/b/bteyvE4g/examenproef
