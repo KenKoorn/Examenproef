@@ -30,16 +30,57 @@
 }
 
 .pinkbutton{
-    background: map-get(variables.$colors, "button-primary");
-    // border: 0.2rem solid map-get(variables.$colors, "buttonBorder");
-    border: none;
-    box-shadow: inset 0 -0.1rem 0 0 map-get(variables.$colors, "button-primary-border");
-    border-radius: map-get(variables.$border, "border-radius-sm");
-    padding: map-get(variables.$padding, "padding-s") map-get(variables.$padding, "padding-md");
-    color: map-get(variables.$colors, "basic-white");
-    font-weight: 600;
-    font-size: 100%;
+    // background: map-get(variables.$colors, "button-primary");
+    // // border: 0.2rem solid map-get(variables.$colors, "buttonBorder");
+    // border: none;
+    // box-shadow: inset 0 -0.1rem 0 0 map-get(variables.$colors, "button-primary-border");
+    // border-radius: map-get(variables.$border, "border-radius-sm");
+    // padding: map-get(variables.$padding, "padding-s") map-get(variables.$padding, "padding-md");
+    // color: map-get(variables.$colors, "basic-white");
+    // font-weight: 600;
+    // font-size: 100%;
+    // text-decoration: none;
+      display: inline-block;
+      background: map-get(variables.$colors, "button-primary");
+      color: map-get(variables.$colors, "basic-white");
+      text-decoration: none;
+      padding: map-get(variables.$padding, "padding-m") map-get(variables.$padding, "padding-l");
+      border-radius: map-get(variables.$border, "border-radius-m");
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.2s ease;
+
+    &:hover{
+        transform: translateY(-2px);
+        filter: brightness(1.05);
+    }
+}
+
+.button{
     text-decoration: none;
+    padding: map-get(variables.$padding, "padding-m") map-get(variables.$padding, "padding-l");
+    border-radius: map-get(variables.$border, "border-radius-md");
+    font-weight: 600;
+    transition: 0.2s ease;
+
+    &__blue {
+        background: map-get(variables.$baseVars, "background-dark");
+        color: map-get(variables.$colors, "basic-white");
+
+        &:hover {
+        background: map-get(variables.$colors, "text-blue");
+        }
+    }
+
+    &__ghost {
+        background: rgba(255, 255, 255, 0.15);
+        color: map-get(variables.$colors, "basic-white");
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:hover {
+        background: rgba(255, 255, 255, 0.25);
+        }
+    }
 }
 
 .checkbox{
@@ -88,3 +129,4 @@
         }
     }
 }
+
