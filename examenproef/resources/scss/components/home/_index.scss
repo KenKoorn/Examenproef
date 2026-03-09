@@ -1,0 +1,5 @@
+// central forwarding for home-related styles
+// other modules can just `@use "./home"` or `@use "../components/home"` from root
+@forward "./home";
+@forward "./jaar";
+@forward "./jaar2";
