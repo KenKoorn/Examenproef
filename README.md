@@ -21,7 +21,11 @@ iedere dag als iedereen heeft gepushed naar development en alles werkt gaat Luna
 
 taken verdeling :
 Scrum master - Bente
+
 Klanten contact - Ken
+
 Git fixer - Luna
+
 Backend fixer - Sara
+
 Frontender - Sem
