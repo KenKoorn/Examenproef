@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Module;
+use App\Models\Subject;
 use App\Models\Year;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -36,17 +38,20 @@ class YearController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource. 
      */
     public function show(string $id)
     {
         $year = Year::find($id);
-        $modules = $year->modules;
+        $modules = Module::with(['lessonPlans', 'lessonPlans.subject'])->where('year_id', $year->id)->get();
+        $subjects = Subject::all();
+
         
         return Inertia::render('Year/Year',
             [
                 'year' => $year,
-                'modules' => $modules
+                'modules' => $modules,
+                'subjects' => $subjects
             ]
         );
     }

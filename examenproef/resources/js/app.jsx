@@ -1,5 +1,5 @@
 import './bootstrap';
-import '../scss/app.scss';
+import '../css/main.css';
 
 
 
