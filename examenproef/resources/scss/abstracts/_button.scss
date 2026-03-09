@@ -1,40 +1,40 @@
-@use "variables";
+// @use "variables";
 
-.button {
-  background: map-get(variables.$colors, "button-primary");
-  border: map-get(variables.$border, "border-standard");
-  border-radius: map-get(variables.$border, "border-radius-xl");
-  padding: map-get(variables.$padding, "padding-m padding-l");
-  color: map-get(variables.$colors, "basic-white");
+// // .button {
+// //   background: map-get(variables.$colors, "button-primary");
+// //   border: map-get(variables.$border, "border-standard");
+// //   border-radius: map-get(variables.$border, "border-radius-xl");
+// //   padding: map-get(variables.$padding, "padding-m") map-get(variables.$padding, "padding-l");
+// //   color: map-get(variables.$colors, "basic-white");
 
-  &:hover {
-    background: map-get(variables.$colors, "button-primary-border");
-  }
-}
+// //   &:hover {
+// //     background: map-get(variables.$colors, "button-primary-border");
+// //   }
+// // }
 
-.btn {
-  text-decoration: none;
-  padding: map-get(variables.$padding, "padding-m")d map-get(variables.$padding, "padding-l");
-  border-radius: map-get(variables.$border, "border-radius-md");
-  font-weight: 600;
-  transition: 0.2s ease;
+// .btn {
+//   text-decoration: none;
+//   padding: map-get(variables.$padding, "padding-m") map-get(variables.$padding, "padding-l");
+//   border-radius: map-get(variables.$border, "border-radius-md");
+//   font-weight: 600;
+//   transition: 0.2s ease;
 
-  &--primary {
-    background: map-get(variables.$baseVars, "background-dark");
-    color: map-get(variables.$colors, "basic-white");
+//   &--primary {
+//     background: map-get(variables.$baseVars, "background-dark");
+//     color: map-get(variables.$colors, "basic-white");
 
-    &:hover {
-      background: map-get(variables.$colors, "text-blue");
-    }
-  }
+//     &:hover {
+//       background: map-get(variables.$colors, "text-blue");
+//     }
+//   }
 
-  &--ghost {
-    background: rgba(255, 255, 255, 0.15);
-    color: map-get(variables.$colors, "basic-white");
-    border: 1px solid rgba(255, 255, 255, 0.3);
+//   &--ghost {
+//     background: rgba(255, 255, 255, 0.15);
+//     color: map-get(variables.$colors, "basic-white");
+//     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.25);
-    }
-  }
-}
+//     &:hover {
+//       background: rgba(255, 255, 255, 0.25);
+//     }
+//   }
+// }

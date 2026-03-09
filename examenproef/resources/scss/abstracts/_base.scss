@@ -3,4 +3,8 @@
 body {
     background: map-get(variables.$baseVars, "background-default");
     color: map-get(variables.$baseVars, "text-base");
+    font-family: 'Inter', sans-serif;
+    color: map-get(variables.$baseVars, "text-base");
+    line-height: 1.6;
+    font-size: 1.6rem;
 }

@@ -22,7 +22,7 @@ function Year() {
 
             <div
                 className="jaar1"
-                style={{ backgroundImage: `url(${backgroundUrl})` }}
+                // style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
                 <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplany')} />
 

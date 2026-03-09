@@ -8,40 +8,38 @@ function Welcome() {
   const user = usePage().props.auth.user;
   const years = usePage().props.years;
   console.log(usePage().props);
+  
   return (
     <>
       <Head title="Home" />
 
-      <section
-        className="home-hero"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      >
-        <div className="home-hero__overlay" />
+      <section className="home" style={{ backgroundImage: `url(${heroImg})` }}>
+        <div className="home__overlay" />
 
-        {/* Logo volledig linksboven */}
-        <div className="home-hero__logo">
-          <img src={logo} alt="Mediacollege Amsterdam Logo" />
+        <div className="home__logo">
+          <img className="home__logo--image" src={logo} alt="Mediacollege Amsterdam Logo" />
         </div>
 
-        <div className="home-hero__content">
-          <div className="home-hero__center">
-            <h1>Curriculum Software Development</h1>
-            <p>
+        <div className="home__content">
+          <div className="home__center">
+            <h1 className="home__center--title">Curriculum Software Development</h1>
+            <p className="home__center--text">
               Hoe ziet onze opleiding op Mediacollege Amsterdam eruit?
             </p>
           </div>
 
-          <div className="home-cards">
+          <div className="home__cards">
             {
               years.map((item, index) => <HomeCard item={item} key={index}/>)
             }
           </div>
-          <div className="home-hero__actions">
+
+          <div className="home__actions">
             {
-              user != null ?
-              <a href={route('dashboard')} className="btn btn--primary"></a>
+              user !== null ?
+              <a href={route('dashboard')} className="button button__blue">Naar dashboard</a>
               :
-              <a href={route('login')} className="btn btn--primary"></a>
+              <a href={route('login')} className="button button__blue">Inloggen</a>
             }
           </div>
         </div>

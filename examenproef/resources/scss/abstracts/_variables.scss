@@ -23,22 +23,22 @@ $colors: (
 );
 
 $padding: (
-    "padding-xs": 0.125em,
-	"padding-s": 0.25em,
-	"padding-m": 0.5em,
-	"padding-md": 0.75em,
-	"padding-l": 1em,
-	"padding-xl": 1.25em,
+    "padding-xs": 0.125em,  //2px
+	"padding-s": 0.25em, //4px
+	"padding-m": 0.5em, //8px
+	"padding-md": 0.75em,  //12px
+	"padding-l": 1em, //16px
+	"padding-xl": 1.25em, //20px
 );
 
 $border: (
     "standard-border": minmax(1px, 0.125em) solid #000,
-	"border-radius-s": 0.25em,
-	"border-radius-sm": 0.5em,
-	"border-radius-m": 0.625em,
-	"border-radius-md": 0.75em,
-	"border-radius-l": 1em,
-	"border-radius-xl": 1.25em,
+	"border-radius-s": 0.25em,  //4px
+	"border-radius-sm": 0.5em,  //8px
+	"border-radius-m": 0.625em, //10px
+	"border-radius-md": 0.75em,   //12px
+	"border-radius-l": 1em, //16px
+	"border-radius-xl": 1.25em, //20px
 );
 // colour 
 $color-button-primary: #e11d83;

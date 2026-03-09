@@ -3,5 +3,9 @@
 @use "components/auth/auth.scss";
 @use "components/modal/modal.scss";
 @use "abstracts/mediaqueries";
-@use "components/home/app.scss";
+@use "abstracts/components";
 @use "components/home/home.scss";
+@use "components/home/jaar";
+@use "components/home/card.scss";
+@use "components/year/year.scss";
+// @use "abstracts/button";

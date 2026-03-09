@@ -2,8 +2,6 @@
 @use "../../abstracts/mixins";
 
 .auth{
-    // background: url('https://welkombijma.nl/wp-content/uploads/2023/05/SD-scaled.jpg');
-    // background-size: cover;
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -35,7 +33,7 @@
 
     &__form{
         background: map-get(variables.$colors, "basic-white");
-        box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(map-get(variables.$baseVars, "color"), 0.1);
+        box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(map-get(variables.$colors, "basic-white"), 0.1);
         padding: 2.5rem 2.5rem;
         @include mixins.flexBox;
         flex-direction: column;
