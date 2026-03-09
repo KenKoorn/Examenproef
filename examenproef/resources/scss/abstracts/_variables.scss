@@ -1,29 +1,44 @@
+$__debug_vars_loaded: true;
+
 // colour 
 $color-button-primary: #e11d83;
 $color-button-primary-border: #B7266F;
+
 $color-base-white: #fff;
 $color-base-black: #000;
+
 $color-text-blue: #374151;
-$color-footer-black: #202020;
-$color-text-base: #1e293b; 
+$color-text-default: #1e293b;
 $color-text-muted: #475569;
-$color-background-dark: #111827; 
-$color-subtitle: #64748b; 
-$color-background-default: #f4f6f9; 
+$color-subtitle: #64748b;
+
+$color-background-dark: #111827;
+$color-background-default: #f4f6f9;
+
+$color-footer-black: #202020;
+// Canonical names (kies één set als waarheid)
+$color-text-default: #1e293b;
+$color-bg-default: #f4f6f9;
+$color-bg-dark: #111827;
+
+// Backwards-compatible aliases (zodat bestaande code niet crasht)
+$color-text-base: $color-text-default;
+$color-background-default: $color-bg-default;
+$color-background-dark: $color-bg-dark;
 
 // spacing / padding
-$padding-xs: 0.125em; 
-$padding-s: 0.25em;   
-$padding-m: 0.5em;    
-$padding-md: 0.75em;  
-$padding-l: 1em;      
-$padding-xl: 1.25em; 
+$padding-xs: 0.125rem;
+$padding-s: 0.25rem;
+$padding-m: 0.5rem;
+$padding-md: 0.75rem;
+$padding-l: 1rem;
+$padding-xl: 1.25rem;
 
-//border
-$border-standard: minmax(1px, 0.125em) solid #000;
-$border-radius-s: 0.25em;  
-$border-radius-sm: 0.5em;
-$border-radius-m: 0.625em; 
-$border-radius-md: 0.75em; 
-$border-radius-l: 1em;     
-$border-radius-xl: 1.25em; 
+// border
+$border-standard: 1px solid $color-base-black;
+$border-radius-s: 0.25rem;
+$border-radius-sm: 0.5rem;
+$border-radius-m: 0.625rem;
+$border-radius-md: 0.75rem;
+$border-radius-l: 1rem;
+$border-radius-xl: 1.25rem;
