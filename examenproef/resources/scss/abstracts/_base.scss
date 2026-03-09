@@ -1,6 +1,6 @@
-@use "./variables" as *;
+@use "variables";
 
 body {
-  background: $color-background-default;
-  color: $color-text-base;
+    background: map-get(variables.$baseVars, "background-default");
+    color: map-get(variables.$baseVars, "text-base");
 }

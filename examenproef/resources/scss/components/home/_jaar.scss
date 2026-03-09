@@ -1,4 +1,4 @@
-@use "../../abstracts" as *;
+@use "../../abstracts/variables";
 
 .jaar {
   max-width: 900px;
@@ -8,17 +8,17 @@
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: $color-text-default;
+    color: map-get(variables.$colors, "text-default");
     margin-bottom: 0.5rem;
   }
 
   &__text {
-    color: $color-text-muted;
+    color: map-get(variables.$colors, "text-muted");
     margin-bottom: 1rem;
   }
 
   &__link {
-    color: $color-button-primary;
+    color: map-get(variables.$colors, "button-primary");
     font-weight: 600;
     text-decoration: none;
 
