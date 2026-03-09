@@ -1,93 +1,91 @@
-import YearModal from "@/Components/Modals/YearModal";
-import PinkButton from "@/Components/PinkButton";
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import GuestLayout from "@/Layouts/GuestLayout";
-import { useForm, usePage } from "@inertiajs/react";
-import { useEffect, useState } from "react";
+import { Head, Link } from "@inertiajs/react";
 
-function Welcome({auth}){
-    const [isOpen, setIsOpen] = useState(false);
-    const [openCohort, setOpenCorhort] = useState(false);
-    const years = usePage().props.years;
-    const roles = usePage().props.auth.role;
-    const {post, processing} = useForm();
-    console.log(roles);
-    console.log(years);
+import heroImg from "../../../public/img/frontimagema.jpg";
+import logo from "../../../public/img/logowitwelkombijma.jpg";
 
-    useEffect(() => {
-        console.log(isOpen);
-    }, [isOpen]);
+export default function Welcome({ auth }) {
+  return (
+    <>
+      <Head title="Home" />
 
-    const submit = (event) => {
-        event.preventDefault();
-        post(route('logout'));
-    }
-    return(
-        <>
-        {
-            auth.user ? <AuthenticatedLayout>
-                user
+      <section
+        className="home-hero"
+        style={{ backgroundImage: `url(${heroImg})` }}
+      >
+        <div className="home-hero__overlay" />
 
-                <PinkButton text="log out" type="submit" onClick={submit}/>
-                
-                {
-                    roles.find((item) => item.name == 'admin') &&
-                    <PinkButton text="cohort +" onClick={() => setOpenCorhort(!openCohort)}/>
-                }
+        {/* Logo volledig linksboven */}
+        <div className="home-hero__logo">
+          <img src={logo} alt="Mediacollege Amsterdam Logo" />
+        </div>
 
-                {
-                    roles.find((item) => item.name == 'admin') &&
-                <button onClick={() => setIsOpen(!isOpen)}>new year +</button>
-                }
+        <div className="home-hero__content">
+          <div className="home-hero__center">
+            <h1>Curriculum Software Development</h1>
+            <p>
+              Hoe ziet onze opleiding op Mediacollege Amsterdam eruit?
+            </p>
+          </div>
 
-                {
-                    years.length != 0 &&
-                    
-                    <section className="home__years">
-                        {
-                            years.map((item, index) => 
-                                <div key={index} className="home__year">
-                                    <p className="home__year--title">year {item.year}</p>
-                                    <p className="home__year--fase">{item.fase}</p>
-                                    <p className="home__year--description">{item.description}</p>
-                                    <PinkButton text="Ondek meer -->" route={route('year.show', item.id)}/>
-                                </div>
-                            )
-                        }
-                    </section>
+          <div className="home-cards">
+            <HomeCard
+              year="Jaar 1"
+              phase="Verkennings fase"
+              text="Ontdek de basis van development, samenwerken en je eerste projecten."
+              href="/jaar1"
+            />
+            <HomeCard
+              year="Jaar 2"
+              phase="Verdiepings fase"
+              text="Meer focus op frameworks, databases en werken in sprints."
+              href="/jaar2"
+            />
+            <HomeCard
+              year="Jaar 3"
+              phase="Praktijk fase"
+              text="Stage, grotere projecten en realistische opdrachten met partners."
+              href="/jaar3"
+            />
+            <HomeCard
+              year="Jaar 4"
+              phase="Afstudeer fase"
+              text="Afstuderen met een eindproject en portfolio richting werkveld."
+              href="/jaar4"
+            />
+          </div>
 
-                }
-
-                <PinkButton text="Nieuw vak +" route={route('subjects.create')}/>
-
-                {
-                    isOpen && <YearModal/>
-                }
-                
-            </AuthenticatedLayout>
-            : <GuestLayout>
-                guest
-                
-                {
-                    years.length != 0 &&
-                    
-                    <section className="home__years">
-                        {
-                            years.map((item, index) => 
-                                <div key={index} className="home__year">
-                                    <p className="home__year--title">year {item.year}</p>
-                                    <p className="home__year--fase">{item.fase}</p>
-                                    <p className="home__year--description">{item.description}</p>
-                                    <PinkButton text="Ondek meer -->" route={route('year.show', item.id)}/>
-                                </div>
-                            )
-                        }
-                    </section>
-                }
-            </GuestLayout>
-        }
-        </>
-    );
+          <div className="home-hero__actions">
+            {auth?.user ? (
+              <Link className="btn btn--primary" href="/dashboard">
+                Naar dashboard
+              </Link>
+            ) : (
+              <>
+                <Link className="btn btn--primary" href="/login">
+                  Inloggen
+                </Link>
+                <Link className="btn btn--ghost" href="/register">
+                  Registreren
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
-export default Welcome;
+function HomeCard({ year, phase, text, href }) {
+  return (
+    <div className="home-card">
+      <div className="home-card__title">{year}</div>
+      <div className="home-card__phase">{phase}</div>
+      <div className="home-card__text">{text}</div>
+
+      <Link className="home-card__btn" href={href}>
+        Ontdek meer →
+      </Link>
+    </div>
+  );
+}

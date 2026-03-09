@@ -4,3 +4,5 @@
 @use "components/auth/auth.scss";
 @use "components/modal/modal.scss";
 @use "abstracts/mediaqueries";
+@use "components/home/app" as *;
+@use "components/home/home" as *;

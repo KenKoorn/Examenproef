@@ -26,6 +26,23 @@ use App\Http\Middleware\Role;
 // })->middleware(['auth', 'verified'])->name('welcome');
 
 Route::get('/', [HomeController::class,'index'])->name('home.index');
+// informational pages for each study year
+Route::get('/jaar1', function () {
+    return Inertia::render('Jaar1');
+});
+Route::get('/jaar2', function () {
+    return Inertia::render('Jaar2');
+});
+Route::get('/jaar3', function () {
+    return Inertia::render('Jaar3');
+});
+Route::get('/jaar4', function () {
+    return Inertia::render('Jaar4');
+});
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -63,3 +80,4 @@ Route::get('/lessonPlans', [SubjectController::class,'show'])->name('lessonPlan.
 // Route::get('/years/{year}/modules')
 
 require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

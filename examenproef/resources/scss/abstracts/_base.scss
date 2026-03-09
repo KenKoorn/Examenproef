@@ -1,16 +1,9 @@
-@use "variables";
-@use "mixins";
+@use "./variables" as *;
 
-body{
-    min-height: 100vh;
-    background: map-get(variables.$baseVars, "background");
-    color: map-get(variables.$baseVars, "color");
-    font-family: map-get(variables.$baseVars, "font");
-    font-size: 1.6rem;
-}
-
-.main{
-    @include mixins.flexBox;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  min-height: 100vh;
+  background: $color-background-default;
+  color: $color-text-base;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
 }
