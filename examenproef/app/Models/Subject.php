@@ -11,4 +11,8 @@ class Subject extends Model
     protected $casts = [
         'teachers' => 'array'
     ];
+
+    public function lessonPlans(){
+        return $this->hasMany(LessonPlan::class);
+    }
 }

@@ -1,12 +1,11 @@
-export default function Checkbox({ className = '', ...props }) {
+const Checkbox = ({value, onChange, label}) => {
     return (
-        <input
-            {...props}
-            type="checkbox"
-            className={
-                'rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-900 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800 ' +
-                className
-            }
-        />
+        <label className="checkbox">
+            <input type="checkbox" checked={value} value={value} onChange={onChange} className="checkbox__input" />
+            <span className="checkbox__mark"></span>
+            {label}
+        </label>
     );
 }
+
+export default Checkbox;
