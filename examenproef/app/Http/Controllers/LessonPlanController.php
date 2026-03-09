@@ -31,7 +31,7 @@ class LessonPlanController extends Controller
     {
         $data = $this->validateData($request);
         $subject = Subject::find($data['subject_id']);
-        $subject->lesson_plans()->create($data);
+        $subject->lessonPlans()->create($data);
         return back();
     }
 
