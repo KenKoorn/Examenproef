@@ -65,6 +65,10 @@ export default function Jaar1() {
             </p>
           </div>
 
+    <div className="image">
+   <img src="/img/placeholder.png" alt="Module foto" />
+  </div>
+
           <div className="vakken-section">
  <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
   Vakken {openModule === 1 ? "▲" : "▼"}
@@ -128,6 +132,10 @@ export default function Jaar1() {
             </p>
           </div>
 
+           <div className="image">
+    <img src="/img/placeholder.png" alt="Module foto" />
+  </div>
+
           <div className="vakken-section">
  <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
   Vakken {openModule === 1 ? "▲" : "▼"}
@@ -188,6 +196,10 @@ export default function Jaar1() {
               projecten die aansluiten bij het werkveld.
             </p>
           </div>
+
+           <div className="image">
+   <img src="/img/placeholder.png" alt="Module foto" />
+  </div>
 
           <div className="vakken-section">
  <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
@@ -250,6 +262,10 @@ export default function Jaar1() {
               projecten die aansluiten bij het werkveld.
             </p>
           </div>
+
+           <div className="image">
+          <img src="/img/placeholder.png" alt="Module foto" />
+  </div>
 
           <div className="vakken-section">
  <h2 onClick={() => setOpenModule(openModule === 1 ? null : 1)}>
