@@ -50,3 +50,7 @@ em help sheet:
 //1.125em == 18px
 //1.25em == 20px
 ```
+
+
+to do 10/03/26 :
+fix alles naar em en gebruik variables
