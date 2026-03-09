@@ -1,0 +1,43 @@
+klanten gesprek Rosmerta 16/02/26
+____________________________________________________________________________________________________________________________________________________________
+
+
+- wat gaan we maken?
+Een webapplicatie voor studenten software development op MA, zodat ze kunnen inzien wat het curriculum is van de opleiding software development
+ 
+- welke doelgroep? 
+studenten van Ma software development & studenten die de opleiding overwegen
+
+
+- met welke software gaan we werken?
+trello (taakverdeling), github (versie beheer), react + laravel (website). 
+
+
+
+
+============================================================================================================================================================
+
+vragen : 
+
+- Wat moet er per module te zien zijn?
+titel, welke lessen er gegeven worden (units), eventueel de docent die de unit geeft. Korte inhoudsopgave.
+
+- Wat moet een student binnen een minuut weten als ze de website bezoeken?
+Dat het het curriculum van software development is, wat leer je hierbij. Wat is het. Wanneer leer je wat. Een duidelijk overzicht van wat je doet. Mag ook allen full-stack doen ipv full-stack en game. De info die erin moet staat -> https://mediacollegeamsterdam.sharepoint.com/:o:/r/teams/TeamSDnieuw/Gedeelde%20documenten/Curriculum%20SD/5.%20Overzicht%20modulen%20en%20units/Curriculum%20Softwaredeveloper%2025?d=w586857548d844a9081e4c28c4da63e86&csf=1&web=1&e=5dhjBx&xsdata=MDV8MDJ8fGUyMjIyZDIzZGFlYzRlNjQ0NTExMDhkZTZkM2ZjNjE2fDhlNjAwZjkyMzBkZjQ2NjdiN2MwM2YyNTk1ZjNmMTJifDB8MHw2MzkwNjgzMTc4MDY5MTA2MDR8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDNSbFlXMXpMekU1T21aeVgxZHdWMHQxY1RkZmVFODBURFoxUzI1RlRrRk1VbVpGVkZaTWJFTlZXRzlKUTNkbmNFUmxVVzh4UUhSb2NtVmhaQzUwWVdOMk1pOWphR0Z1Ym1Wc2N5OHhPVHBtY2w5WGNGZExkWEUzWDNoUE5FdzJkVXR1UlU1QlRGSm1SVlJXVEd4RFZWaHZTVU4zWjNCRVpWRnZNVUIwYUhKbFlXUXVkR0ZqZGpJdmJXVnpjMkZuWlhNdk1UYzNNVEl6TkRrM056YzRNUT09fDBkOWRmZGFiZTJlNzQ3YWRjYzgwMDhkZTZkM2ZjNjE1fDI0ZDQzODFkODQ0NjRlZGU4NjdjY2Y2Njg3Mjg2Mjhj&sdata=ZDc0SXl3eHNhV3hwWTZKQk5HZzZnQkt5QWFNazk3dWlzcHVReTlMWHZpVT0%3D&ovuser=8e600f92-30df-4667-b7c0-3f2595f3f12b%2C35861%40ma-web.nl&OR=Teams-HL&CT=1771245032146&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjAxMDQwMDkyNSJ9
+
+- Alleen info over curriculum  of ook andere dingen die op de website vertoond moeten worden?
+voornamelijk curriculum. 
+
+- Wanneer is de oplever datum?
+Onbekend op het moment, waarschijnlijk 9 maart. Moet nog uitgezocht worden. 
+
+- Wil je liever een informatie website (Welkom bij ma) of een fancy website (ma website)?
+informatie website , zoals welkom bij ma. 
+
+- Hoe ziet een goeie website voor jou eruit? 
+welkom bij ma losse blokjes : overzichtelijk. In een oogopslag zien wat het is en wat je kan doen. Moet responsive zijn, kleur belangrijk. Accessibility en SEO niet belangrijk. 
+
+- Sta je open voor een aparte website voor het beheer van het curriculum? 
+ja graag. Zorgen dat random mensen er niet bij kunnen er moet ook inlog zijn. Ook een beheerder die de dingen kunnen veranderen. Docenten kunnen alleen inhoud veranderen (lessen enzo)
+
+- Design feedback pls -
