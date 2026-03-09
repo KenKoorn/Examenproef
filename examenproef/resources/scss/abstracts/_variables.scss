@@ -1,17 +1,23 @@
 // $__debug_vars_loaded: true;
 
 $baseVars: (
-    "background": white,
-    "color": black,
-    "font": sans-serif
+    "text-base": #1e293b,
+    "font": sans-serif,
+	"background-default": #f4f6f9,
+	"background-dark": #111827
 );
 
 $colors: (
     "button-primary": #e11d83,
 	"button-primary-border": minmax(1px, 0.125em) solid #B7266F,
+	
 	"basic-white": #FFF,
 	"basic-black": #000,
+
+	"text-default": #1e293b,
 	"text-blue": #374151,
+	"text-muted": #475569,
+
 	"footer-black": #202020,
     "error-red": #ff525d 
 );
@@ -46,8 +52,8 @@ $color-text-default: #1e293b;
 $color-text-muted: #475569;
 $color-subtitle: #64748b;
 
-$color-background-dark: #111827;
-$color-background-default: #f4f6f9;
+// $color-background-dark: #111827;
+// $color-background-default: #f4f6f9;
 
 $color-footer-black: #202020;
 // Canonical names (kies één set als waarheid)

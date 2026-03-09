@@ -21,11 +21,11 @@
   width: 70%;
   max-width: 900px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
 
-.overlay-card h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
+  & h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
 }
 
 .subtitle {
@@ -34,30 +34,28 @@
   margin-bottom: 20px;
 }
 
-/* ================= VAKKEN ================= */
+.vakken{
+  &-section {
+    padding: 60px 10%;
 
-.vakken-section {
-  padding: 60px 10%;
+    &  h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
 }
-
-.vakken-section h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.vakken-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* ================= VAK ITEM ================= */
-
-.vak-item {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
+.vak{
+  &-item {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
 }
 
 .vak-item:hover {

@@ -1,6 +1,0 @@
-// forward the core modules in the correct order so that
-// everything which depends on variables can see them.
-@forward "variables";
-@forward "mixins";
-@forward "base";
-@forward "reset";
