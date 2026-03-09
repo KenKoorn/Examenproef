@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->foreignId('subject_id')->constrained()->onDelete('cascade');
             $table->foreignId('module_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamps();   
         });
     }
 
