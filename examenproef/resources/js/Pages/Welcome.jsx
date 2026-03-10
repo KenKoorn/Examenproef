@@ -48,6 +48,7 @@ function Welcome() {
           </div>
         </div>
       </section>
+      
       {
         open && <YearModal/>
       }
