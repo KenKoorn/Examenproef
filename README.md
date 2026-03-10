@@ -1,4 +1,8 @@
 # Examproef
+agenda : 
+https://teamup.com/c/sq5g3p
+
+
 trello :
 https://trello.com/b/bteyvE4g/examenproef
 
