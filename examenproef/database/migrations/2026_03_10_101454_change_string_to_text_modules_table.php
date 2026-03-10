@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('modules', function (Blueprint $table) {
-            $table->string('imcolumn: age')->change();
+            $table->string('image')->change();
         });
     }
 };
