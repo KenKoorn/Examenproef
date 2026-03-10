@@ -29,6 +29,7 @@ function Year() {
                 <PinkButton text="new module" onClick={() => setOpenForm('module')} />
                 <PinkButton text="new vak" onClick={() => setOpenForm('subject')} />
                 <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplan')} />
+                <a href={route('subjects.create')}>subject</a>
 
                 <Timeline/>
 
