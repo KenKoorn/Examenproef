@@ -1,4 +1,4 @@
-import { Head, Link, usePage } from "@inertiajs/react";
+import { Head, Link, useForm, usePage } from "@inertiajs/react";
 
 import heroImg from "../../../public/img/frontimagema.jpg";
 import logo from "../../../public/img/logowitwelkombijma.jpg";
@@ -12,6 +12,12 @@ function Welcome() {
   const years = usePage().props.years;
   console.log(usePage().props);
   const [open, setOpen] = useState(false);
+  const {post} = useForm();
+
+  const submit = (event) => {
+        event.preventDefault();
+        post(route('logout'));
+    }
   
   return (
     <>
@@ -38,6 +44,8 @@ function Welcome() {
             }
           </div>
                 <PinkButton text="new lessonplan" onClick={() => setOpen(true)} />
+                  
+        <PinkButton text="Logout" onClick={submit} className="logout-button"/>
           <div className="home__actions">
             {
               user !== null ?
@@ -47,6 +55,7 @@ function Welcome() {
             }
           </div>
         </div>
+
       </section>
       {
         open && <YearModal/>
