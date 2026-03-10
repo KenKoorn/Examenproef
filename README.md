@@ -33,3 +33,24 @@ Git fixer - Luna
 Backend fixer - Sara
 
 Frontender - Sem
+
+
+
+em help sheet:
+
+```
+//0.125em == 2px
+//0.25em == 4px
+//0.3753m == 6px
+//0.5em == 8px
+//0.625em == 10px
+//0.75em == 12px
+//0.875em == 14px
+//1em == 16px
+//1.125em == 18px
+//1.25em == 20px
+```
+
+
+to do 10/03/26 :
+fix alles naar em en gebruik variables
