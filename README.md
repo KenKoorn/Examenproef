@@ -25,20 +25,15 @@ iedere dag als iedereen heeft gepushed naar development en alles werkt gaat Luna
 
 
 
+```
+De git bijbel :
 
-taken verdeling :
+- Pull altijd vóórdat je pushed.
+- Push alleen naar development.
+- Push altijd voordat je naar huis gaat.
+- Als je een merge conflict hebt of iets niet snapt VRAAG HET.
 
-Scrum master - Bente
-
-Klanten contact - Ken
-
-Git fixer - Luna
-
-Backend fixer - Sara
-
-Frontender - Sem
-
-
+```
 
 em help sheet:
 
