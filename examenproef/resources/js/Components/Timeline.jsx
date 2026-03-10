@@ -1,7 +1,10 @@
+import { usePage } from "@inertiajs/react";
 import React from "react";
 
 
 export default function Timeline() {
+  console.log(usePage().props);
+  const modules = usePage().props.modules;
   const steps = [
     { id: 1, title: "Module 1" },
     { id: 2, title: "Module 2" },
@@ -11,14 +14,24 @@ export default function Timeline() {
 
   return (
     <div className="timeline">
-      {steps.map((step) => (
+      {
+        modules.map((module, index) => 
+          <div className="timeline-item" key={index}>
+            <div className="circle"/>
+            <p>
+              {module.name}
+            </p>
+          </div>
+        )
+      }
+      {/* {steps.map((step) => (
         <div key={step.id} className="timeline-item">
           <div className={`circle ${step.active ? "active" : ""}`} />
           <p className={step.active ? "active-text" : ""}>
             {step.title}
           </p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

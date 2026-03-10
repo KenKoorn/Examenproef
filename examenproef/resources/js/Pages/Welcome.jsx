@@ -3,11 +3,15 @@ import { Head, Link, usePage } from "@inertiajs/react";
 import heroImg from "../../../public/img/frontimagema.jpg";
 import logo from "../../../public/img/logowitwelkombijma.jpg";
 import HomeCard from "@/Components/HomeCard";
+import PinkButton from "@/Components/PinkButton";
+import { useState } from "react";
+import YearModal from "@/Components/Modals/YearModal";
 
 function Welcome() {
   const user = usePage().props.auth.user;
   const years = usePage().props.years;
   console.log(usePage().props);
+  const [open, setOpen] = useState(false);
   
   return (
     <>
@@ -33,7 +37,7 @@ function Welcome() {
               years.map((item, index) => <HomeCard item={item} key={index}/>)
             }
           </div>
-
+                <PinkButton text="new lessonplan" onClick={() => setOpen(true)} />
           <div className="home__actions">
             {
               user !== null ?
@@ -44,6 +48,9 @@ function Welcome() {
           </div>
         </div>
       </section>
+      {
+        open && <YearModal/>
+      }
     </>
   );
 }

@@ -2,6 +2,7 @@ import LessonModal from "@/Components/Modals/LessonModal";
 import ModuleModal from "@/Components/Modals/ModuleModal";
 import PinkButton from "@/Components/PinkButton";
 import SubjectItem from "@/Components/SubjectItem";
+import Timeline from "@/Components/Timeline";
 import { Head, usePage } from "@inertiajs/react";
 import { useState } from "react";
 
@@ -24,29 +25,9 @@ function Year() {
                 className="jaar1"
                 // style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
-                <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplany')} />
+                <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplan')} />
 
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 1</p>
-                    </div>
-
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 2</p>
-                    </div>
-
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 3</p>
-                    </div>
-
-                    <div className="timeline-item active">
-                        <div className="circle"></div>
-                        <p>Voortgangsgesprek</p>
-                    </div>
-                </div>
+                <Timeline/>
 
                 {
                     modules.map((module, index) => 

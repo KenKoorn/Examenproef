@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { useForm, usePage } from "@inertiajs/react";
 import TextInput from "../Input";
 import PinkButton from "../PinkButton";
 
@@ -8,9 +8,10 @@ function YearModal(){
         fase: '',
         description: ''
     });
+    console.log(usePage().props);
     const submit = (event) => {
         event.preventDefault();
-        post(route('year.store'));
+        post(route('years.store'));
     }
 
     return (
