@@ -1,7 +1,9 @@
 import LessonModal from "@/Components/Modals/LessonModal";
 import ModuleModal from "@/Components/Modals/ModuleModal";
+import SubjectModal from "@/Components/Modals/SubjectModal";
 import PinkButton from "@/Components/PinkButton";
 import SubjectItem from "@/Components/SubjectItem";
+import Timeline from "@/Components/Timeline";
 import { Head, usePage } from "@inertiajs/react";
 import { useState } from "react";
 
@@ -19,34 +21,17 @@ function Year() {
     return (
         <>
             <Head title="Jaar 1" />
-
             <div
                 className="jaar1"
-                // style={{ backgroundImage: `url(${backgroundUrl})` }}
+                style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
-                <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplany')} />
+                <PinkButton text="edit jaar" onClick={() => setOpenForm('year')} />
+                <PinkButton text="new module" onClick={() => setOpenForm('module')} />
+                <PinkButton text="new vak" onClick={() => setOpenForm('subject')} />
+                <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplan')} />
+                <a href={route('subjects.create')}>subject</a>
 
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 1</p>
-                    </div>
-
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 2</p>
-                    </div>
-
-                    <div className="timeline-item">
-                        <div className="circle"></div>
-                        <p>Module 3</p>
-                    </div>
-
-                    <div className="timeline-item active">
-                        <div className="circle"></div>
-                        <p>Voortgangsgesprek</p>
-                    </div>
-                </div>
+                <Timeline/>
 
                 {
                     modules.map((module, index) => 
@@ -92,7 +77,11 @@ function Year() {
             </div>
 
             {
-                openForm != null ? openForm == 'lessonplan' && <LessonModal/> : null
+                openForm != null ? 
+                openForm == 'lessonplan' && <LessonModal/>
+                || openForm == 'module' && <ModuleModal/>
+                || openForm == 'year' && <YearModule/>
+                || openForm == 'subject' && <SubjectModal/> : null
             }
 
         </>

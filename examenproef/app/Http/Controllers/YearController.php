@@ -43,7 +43,7 @@ class YearController extends Controller
     public function show(string $id)
     {
         $year = Year::find($id);
-        $modules = Module::with(['lessonPlans', 'lessonPlans.subject'])->where('year_id', $year->id)->get();
+        $modules = Module::with(['lessonPlans', 'lessonPlans.subject'])->where('year_id', $id)->get();
         $subjects = Subject::all();
 
         
