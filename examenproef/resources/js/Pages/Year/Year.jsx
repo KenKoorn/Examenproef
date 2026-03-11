@@ -1,6 +1,7 @@
 import LessonModal from "@/Components/Modals/LessonModal";
 import ModuleModal from "@/Components/Modals/ModuleModal";
 import SubjectModal from "@/Components/Modals/SubjectModal";
+import YearModal from "@/Components/Modals/YearModal";
 import PinkButton from "@/Components/PinkButton";
 import SubjectItem from "@/Components/SubjectItem";
 import Timeline from "@/Components/Timeline";
@@ -23,7 +24,7 @@ function Year() {
             <Head title="Jaar 1" />
             <div
                 className="jaar1"
-                // style={{ backgroundImage: `url(${backgroundUrl})` }}
+                style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
                 <PinkButton text="edit jaar" onClick={() => setOpenForm('year')} />
                 <PinkButton text="new module" onClick={() => setOpenForm('module')} />
@@ -80,7 +81,7 @@ function Year() {
                 openForm != null ? 
                 openForm == 'lessonplan' && <LessonModal/>
                 || openForm == 'module' && <ModuleModal/>
-                || openForm == 'year' && <YearModule/>
+                || openForm == 'year' && <YearModal/>
                 || openForm == 'subject' && <SubjectModal/> : null
             }
 
