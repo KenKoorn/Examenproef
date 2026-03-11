@@ -10,12 +10,14 @@ import { useState } from "react";
 
 function Year() {
     const year = usePage().props.year;
+    const user = usePage().props.auth.user;
     const roles = usePage().props.auth.role;
     const [isOpen, setIsOpen] = useState(false);
     const modules = usePage().props.modules;
     const subjects = usePage().props.subjects;
     const [openForm, setOpenForm] = useState(null);
     console.log(usePage().props);
+    console.log(openForm);
     const backgroundUrl =
         "https://welkombijma.nl/wp-content/uploads/2023/05/SD-scaled.jpg"; // Pas dit pad aan naar jouw afbeelding
     const [openModule, setOpenModule] = useState(null);
@@ -26,17 +28,23 @@ function Year() {
                 className="jaar1"
                 style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
-                <PinkButton text="edit jaar" onClick={() => setOpenForm('year')} />
-                <PinkButton text="new module" onClick={() => setOpenForm('module')} />
-                <PinkButton text="new vak" onClick={() => setOpenForm('subject')} />
-                <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplan')} />
-                <a href={route('subjects.create')}>subject</a>
+                {
+                    user != null &&
+                    <>
+                        <PinkButton text="edit jaar" onClick={() => setOpenForm('year')} />
+                        <PinkButton text="new module" onClick={() => setOpenForm('module')} />
+                        <PinkButton text="new vak" onClick={() => setOpenForm('subject')} />
+                        <PinkButton text="new lessonplan" onClick={() => setOpenForm('lessonplan')} />
+                        <a href={route('subjects.create')}>subject</a>
+                    </>
+                }
 
                 <Timeline/>
 
                 {
                     modules.map((module, index) => 
                         <div className="content-card" key={index}>
+                            <PinkButton text="edit module" onClick={() => setOpenForm(module.id)} />
                             <div className="module">
                                 <h2>{module.name}</h2>
                                 {/* <p className="subtitle">Oriëntatie fase</p> */}
@@ -81,6 +89,7 @@ function Year() {
                 openForm != null ? 
                 openForm == 'lessonplan' && <LessonModal/>
                 || openForm == 'module' && <ModuleModal/>
+                || openForm == parseInt(openForm) && <ModuleModal id={openForm}/>
                 || openForm == 'year' && <YearModal/>
                 || openForm == 'subject' && <SubjectModal/> : null
             }
