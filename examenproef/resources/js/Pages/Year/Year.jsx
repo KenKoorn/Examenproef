@@ -23,7 +23,7 @@ function Year() {
             <Head title="Jaar 1" />
             <div
                 className="jaar1"
-                // style={{ backgroundImage: `url(${backgroundUrl})` }}
+                style={{ backgroundImage: `url(${backgroundUrl})` }}
             >
                 <PinkButton text="edit jaar" onClick={() => setOpenForm('year')} />
                 <PinkButton text="new module" onClick={() => setOpenForm('module')} />
