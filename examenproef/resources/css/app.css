@@ -484,4 +484,12 @@ body {
   font-weight: bold;
 }
 
+.image {
+  width: 20em;
+}
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -43,9 +43,15 @@ function Welcome() {
               years.map((item, index) => <HomeCard item={item} key={index}/>)
             }
           </div>
-                <PinkButton text="new lessonplan" onClick={() => setOpen(true)} />
-                  
-        <PinkButton text="Logout" onClick={submit} className="logout-button"/>
+                
+              {
+                user !== null && 
+                <>
+                <PinkButton text="Logout" onClick={submit} className="logout-button"/>
+                <PinkButton text="new jaar" onClick={() => setOpen(true)} />
+                </>
+              }   
+        
           <div className="home__actions">
             {
               user !== null ?

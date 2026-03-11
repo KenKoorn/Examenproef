@@ -2,18 +2,26 @@ import { useForm, usePage } from "@inertiajs/react";
 import TextInput from "../Input";
 import PinkButton from "../PinkButton";
 
-function ModuleModal(){
+function ModuleModal({id}){
+    console.log(id);
     const year = usePage().props.year;
     console.log(year);
-    const { data, setData, post, processing, errors } = useForm({
-        name: '',
-        description: '',
-        image: ''
+    console.log(usePage().props);
+    const module = id != null && usePage().props.modules.find((item) => item.id == id);
+    const { data, setData, post, patch, processing, errors } = useForm({
+        name: module != null ? module.name : '',
+        description: module != null ? module.description : '',
+        image: module != null ? module.image : ''
     });
 
     const submit = (event) => {
         event.preventDefault();
-        post(route('module.store', year));
+        if(module == null){
+            post(route('module.store', year));
+        }
+        else{
+            patch(route('module.update', id));
+        }
     }
 
     return (
